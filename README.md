@@ -10,7 +10,16 @@ python3 -m http.server 8000
 ```
 
 Puis ouvrir <http://localhost:8000>. Le dossier peut être publié tel quel sur n'importe quel hébergement statique
-(Netlify, Vercel, GitHub Pages, OVH…).
+(Netlify, Vercel, OVH…).
+
+## Déploiement (GitHub Pages)
+
+Le workflow `.github/workflows/pages.yml` publie le site à chaque push sur `main` (ou à la main, via l'onglet
+Actions → « Déploiement GitHub Pages » → Run workflow). Seuls `index.html`, `favicon.svg` et `assets/` sont publiés.
+
+Réglage à faire **une seule fois** : *Settings → Pages → Build and deployment → Source : GitHub Actions*.
+Adresse du site : <https://loopifyagency.github.io/site-le-saint-louis/>. Tous les chemins sont relatifs, le site
+fonctionne donc aussi bien dans ce sous-dossier que sur un domaine personnalisé.
 
 ## Structure
 
